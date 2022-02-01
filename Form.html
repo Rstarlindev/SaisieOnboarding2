@@ -1,0 +1,34 @@
+<html>
+
+<script src="https://rengoku72-developer-edition.na150.force.com/lightning/lightning.out.js"></script>
+
+  <script>
+    const appName = 'c:OptOutFormWrapper';
+    const componentName = 'c:optoutForm';
+    const lightningEndpoint ='https://rengoku72-developer-edition.na150.force.com';
+                               
+    const targetElement = document.querySelector("[data-lightning-out]");
+    const componentAttributes = {
+
+    };
+
+    $Lightning.use(
+            appName,
+            function (){
+              $Lightning.createComponent(
+                      componentName,
+                      componentAttributes,
+                      targetElement,
+                      function (cmp){
+                        console.log('lightning component created');
+                      }
+              );
+            },
+            lightningEndpoint
+    );
+
+
+  </script>
+
+
+</html>
